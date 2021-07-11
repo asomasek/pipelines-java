@@ -5,10 +5,10 @@ runAs: root
 shell: bash
 env:
     variables:
-        "VERSION_HIGH": "25"
+        "VERSION_MEDIUM": "25"
     exportedVariables:
         - VERSION_LOW
-        - VERSION_MEDIUM
+        - VERSION_HIGH
 
 #variables:
 # "testEnv" : "testValue1"
@@ -37,7 +37,7 @@ steps:
   name: "Set Variables"
   timeoutInSeconds: 30
   command: |
-      export VERSION_MEDIUM=5
+      export VERSION_HIGH=5
       export VERSION_LOW=13
   onFailure:
     - type: Command
