@@ -5,10 +5,11 @@ runAs: root
 shell: bash
 env:
     variables:
-        "VERSION_MEDIUM": "25"
+        "Param4": "25"
     exportedVariables:
-        - VERSION_LOW
-        - VERSION_HIGH
+        - BPParam3
+        - Param4
+        - BEParam6
 
 #variables:
 # "testEnv" : "testValue1"
@@ -37,8 +38,9 @@ steps:
   name: "Set Variables"
   timeoutInSeconds: 30
   command: |
-      export VERSION_HIGH=5
-      export VERSION_LOW=13
+      export BPParam3=3000
+      export Param4=4000
+      export BEParam6=6000
   onFailure:
     - type: Command
       timeoutInSeconds: 400
